@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS للتصميم -->
+    <link rel="stylesheet" href="CSS/testo.css">
+
+    <!-- Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="javascript:history.back()" class="return-link">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <!-- Header Section -->
+    <header class="testimonials-header">
+        <!-- Logo -->
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="Logo.png" alt="Website Logo" class="logo">
+            </a>
+        </div>
+        <h1>Testimonials</h1>
+        <p>Share your experience or view feedbacks from others!</p>
+
+      
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="testimonials-actions">
+            <!-- زر إرسال تعليق -->
+            <button id="send-feedback-btn" class="action-btn">Send Your Feedback</button>
+
+            <!-- زر عرض التعليقات -->
+            <button id="view-feedbacks-btn" class="action-btn">View Feedbacks</button>
+        </div>
+    </main>
+
+    <!-- نافذة إرسال التعليقات -->
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Send Your Feedback</h2>
+            <form id="feedback-form">
+                <label for="name-input">Your Name:</label>
+                <input type="text" id="name-input" placeholder="Enter your name" required>
+                
+                <label for="feedback-input">Your Feedback:</label>
+                <textarea id="feedback-input" placeholder="Write your feedback here..." required></textarea>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- نافذة عرض التعليقات -->
+    <div id="view-feedbacks-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Feedbacks</h2>
+            <ul id="feedbacks-list"></ul>
+        </div>
+    </div>
+	<div class="video-slider-wrapper">
+    <!-- السهم الأيسر -->
+    <button class="arrow-btn left-arrow" id="prev-video">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- الفيديو -->
+    <div class="video-container">
+        <video id="current-video" controls>
+            <source src="videos/video1.MOV" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- السهم الأيمن -->
+    <button class="arrow-btn right-arrow" id="next-video">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</div>
+
+
+    <!-- Footer -->
+    <footer class="testimonials-footer">
+        <p>&copy; 2024 Saferni. All rights reserved.</p>
+    </footer>
+
+
+
+    <!-- ربط ملف JavaScript -->
+    <script src="js/sendo.js"></script>
+</body>
+
+</html>

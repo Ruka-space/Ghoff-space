@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Frequently Asked Questions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <a href="javascript:history.back()" class="return-link">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="Logo.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+
+        <!-- Question 1 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                How can I book a trip?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>To book a trip, simply visit our "Get A Trip Quote" page, fill in the details, and submit your request. We will get back to you with the best options.</p>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                How can I contact you?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+<p>You can contact us via email at <a href="mailto:info@safrni.org">info@safrni.org</a> or call us at <a href="tel:+201208985001">+201208985001</a>. You can also follow us on Instagram at <a href="https://instagram.com/safrnitravels" target="_blank">Safrni Travels</a>.</p>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                What is your booking policy?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>We require a deposit to confirm your booking. The full payment is due before the trip. Cancellations can be made up to 48 hours in advance for a full refund. After that, a partial refund may apply.</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- JavaScript Section -->
+    <script>
+        // الحصول على جميع الأسئلة
+        const questions = document.querySelectorAll('.faq-question');
+
+        // إضافة حدث النقر لكل سؤال
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                // البحث عن الإجابة المرتبطة بالسؤال
+                const answer = question.nextElementSibling;
+
+                // التبديل بين إظهار أو إخفاء الإجابة
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                    question.querySelector('i').style.transform = "rotate(0deg)";
+                } else {
+                    answer.style.display = "block";
+                    question.querySelector('i').style.transform = "rotate(180deg)";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">

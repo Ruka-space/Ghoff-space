@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <a href="javascript:history.back()" class="return-link">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="Logo.png" alt="Safrni Logo" class="logo">  
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery-container">
+        <h1>Our Gallery</h1>
+
+        <div class="gallery-grid">
+            <!-- Image 1 -->
+            <div class="gallery-item">
+                <img src="assets/images/photo1.JPG" alt="Beautiful Sunset View" class="gallery-image" onclick="openModal('modal1')">
+            </div>
+            <!-- Image 2 -->
+            <div class="gallery-item">
+                <img src="assets/images/photo2.jpeg" alt="Mountain Adventure" class="gallery-image" onclick="openModal('modal2')">
+            </div>
+            <!-- Video 1 -->
+            <div class="gallery-item">
+                <video class="gallery-video" onclick="openModal('modal3')">
+                    <source src="assets/videos/video1.MOV" type="video/mp4">
+                </video>
+            </div>
+            <!-- Image 3 -->
+            <div class="gallery-item">
+                <img src="assets/images/photo3.jpeg" alt="City Landscape" class="gallery-image" onclick="openModal('modal4')">
+            </div>
+            <!-- Video 2 -->
+            <div class="gallery-item">
+                <video class="gallery-video" onclick="openModal('modal5')">
+                    <source src="assets/videos/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Image/Video View -->
+    <div id="modal1" class="modal">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <img src="assets/images/photo1.JPG" alt="Beautiful Sunset View" class="modal-content">
+    </div>
+    <div id="modal2" class="modal">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <img src="assets/images/photo2.jpeg" alt="Mountain Adventure" class="modal-content">
+    </div>
+    <div id="modal3" class="modal">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <video controls class="modal-content">
+            <source src="assets/videos/video1.MOV" type="video/mp4">
+        </video>
+    </div>
+    <div id="modal4" class="modal">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <img src="assets/images/photo3.jpeg" alt="City Landscape" class="modal-content">
+    </div>
+    <div id="modal5" class="modal">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <video controls class="modal-content">
+            <source src="assets/videos/video2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script src="js/gallery.js"></script>
+</body>
+</html>

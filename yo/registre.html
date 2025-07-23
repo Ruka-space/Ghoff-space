@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Safrni Travels</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Logo -->
+    <header class="register-header">
+        <div class="logo-container">
+            <img src="Logo.png" alt="Safrni Travels Logo" class="logo">
+        </div>
+    </header>
+
+    <!-- Registration Container -->
+    <main class="register-main">
+        <div class="register-container">
+            <h1 class="register-title">Create Account</h1>
+            
+            <form class="register-form" action="process_register.php" method="POST">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+                    <i class="fas fa-user input-icon"></i>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    <i class="fas fa-envelope input-icon"></i>
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Choose a username">
+                    <i class="fas fa-at input-icon"></i>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Create a password">
+                    <i class="fas fa-lock input-icon"></i>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required placeholder="Repeat your password">
+                    <i class="fas fa-lock input-icon"></i>
+                </div>
+                
+                <div class="form-group terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                </div>
+                
+                <button type="submit" class="register-btn">Register</button>
+                
+                <div class="login-link">
+                    Already have an account? <a href="login.html">Login here</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="register-footer">
+        <p>&copy; 2024 Safrni Travels. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Back to Home Link -->
+    <div class="back-link">
+        <a href="index.html">
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
+</body>
+</html>
